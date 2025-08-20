@@ -1,12 +1,12 @@
-# NHS England TEL frontend
+# NHS England TEL View Components
 
 NHS England TEL frontend extends the NHS.UK frontend with additional components.
 
-## How to install NHS England TEL frontend
+## How to install NHS England TEL View Components
 
 ### 1. Install with package managers
 
-We recommend that you [install NHS England TEL frontend using node package manager (npm)](/docs/installation/installing-with-npm.md).
+We recommend that you [install NHS England TEL View Components using node package manager (npm)](/docs/installation/installing-with-npm.md).
 
 ### 2. Install by using compiled files
 
