@@ -34,7 +34,12 @@ jobs:
             "$API_URL")
 
           ### extract latest nuget pkg version
-          LATEST_VERSION=$(echo "$VERSIONS_JSON" | jq -r '.[0].name // "0.0.0"')
+          if echo "$VERSIONS_JSON" | jq . >/dev/null 2>&1; then
+              LATEST_VERSION=$(echo "$VERSIONS_JSON" | jq -r 'try (.[0].name) catch "0.0.0"')
+          else
+              LATEST_VERSION="0.0.0"
+          fi
+
 
           echo "Latest NuGet package version found: $LATEST_VERSION"
           echo "version=$LATEST_VERSION" >> $GITHUB_OUTPUT
