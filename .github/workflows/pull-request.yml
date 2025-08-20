@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER: ${{ github.repository_owner }}
-          NUGET_PACKAGE: "DotnetViewComponents"
+          NUGET_PACKAGE: "NHSUKViewComponents"
         run: |
           echo "Fetching latest NuGet version for package '$NUGET_PACKAGE' in owner '$OWNER'"
           
@@ -102,7 +102,7 @@ jobs:
       packages: write
     env:
       BUILD_CONFIG: "Release"
-      PROJECT_PATH: "DotnetViewComponents/DotnetViewComponents.csproj"
+      PROJECT_PATH: "NHSUKViewComponents/NHSUKViewComponents.csproj"
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     steps:
