@@ -106,7 +106,7 @@ jobs:
       packages: write
     env:
       BUILD_CONFIG: "Release"
-      PROJECT_PATH: "NHSUKViewComponents/NHSUKViewComponents.csproj"
+      PROJECT_PATH: "NHSETELViewComponents/NHSETELViewComponents.csproj"
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     steps:
