@@ -40,7 +40,6 @@ jobs:
               LATEST_VERSION="0.0.0"
           fi
 
-
           echo "Latest NuGet package version found: $LATEST_VERSION"
           echo "version=$LATEST_VERSION" >> $GITHUB_OUTPUT
 
