@@ -162,7 +162,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: softprops/action-gh-release@v2.3.2
+        uses: softprops/action-gh-release@v2.3.3
         with:
           tag_name: v${{ needs.versioning.outputs.new_version }}
           release_name: Release v${{ needs.versioning.outputs.new_version }}
