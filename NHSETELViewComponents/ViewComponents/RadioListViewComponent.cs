@@ -5,7 +5,6 @@
 
     using Microsoft.AspNetCore.Mvc;
     using NHSETELViewComponents.ViewModels;
-    using NHSETELViewComponents.ViewModels;
 
     public class RadioListViewComponent : ViewComponent
     {
@@ -24,8 +23,7 @@
         {
             var model = ViewData.Model;
             var property = model.GetType().GetProperty(aspFor);
-            var errorMessages = ViewData.ModelState[property?.Name]?.Errors.Select(e => e.ErrorMessage) ??
-                                new string[] { };
+            var errorMessages = ViewData.ModelState[property?.Name]?.Errors.Select(e => e.ErrorMessage) ?? new string[] { };
 
             var radiosList = radios.Where(x=>x.Label != optionalRadio).Select(
                 r => new RadiosItemViewModel(
