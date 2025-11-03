@@ -10,12 +10,21 @@ namespace NHSETELViewComponents.ViewComponents
     {
         public IViewComponentResult Invoke(
             LinkViewModel homeLink,
-            List<LinkViewModel>? accountLinks = null,
+            Dictionary<string, LinkViewModel>? accountLinks = null,
             List<LinkViewModel>? navigationLinks = null,
             string? searchFolder = null,
             string? searchNavView = null,
             string? searchControllerName = null)
         {
+            if (accountLinks == null)
+            {
+                accountLinks = new Dictionary<string, LinkViewModel>
+                {
+                    { "logout", new LinkViewModel("Home", "Logout", "Log out", null) },
+                    { "account", new LinkViewModel("myaccount", null, "My account", null) }
+                };
+            }
+
             var model = new HeaderViewModel(homeLink, accountLinks, navigationLinks, searchFolder, searchNavView, searchControllerName);
 
             return View(model);

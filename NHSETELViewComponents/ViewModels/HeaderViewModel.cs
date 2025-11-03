@@ -4,7 +4,7 @@ namespace NHSETELViewComponents.ViewModels
     {
         public HeaderViewModel(
             LinkViewModel homeLink,
-            List<LinkViewModel>? accountLinks,
+            Dictionary<string, LinkViewModel>? accountLinks,
             List<LinkViewModel>? navigationLinks,
             string? searchFolder = null,
             string? searchNavView = null,
@@ -21,7 +21,7 @@ namespace NHSETELViewComponents.ViewModels
 
         public LinkViewModel HomeLink { get; set; }
 
-        public List<LinkViewModel>? AccountLinks { get; set; }
+        public Dictionary<string, LinkViewModel>? AccountLinks { get; set; }
 
         public List<LinkViewModel>? NavigationLinks { get; set; }
 
